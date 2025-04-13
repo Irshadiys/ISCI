@@ -1,0 +1,6 @@
+@ISCI.API_HostAddress = http://localhost:5219
+
+GET {{ISCI.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
