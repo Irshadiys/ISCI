@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250413122938_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20250413131925_FixNullableFields")]
+    partial class FixNullableFields
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -63,35 +63,27 @@ namespace Infrastructure.Migrations
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Bio")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<string>("Email")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<string>("FieldOfStudy")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<string>("FullName")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<string>("Institution")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<string>("ORCID")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<string>("PasswordHash")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<string>("UserName")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.HasKey("Id");
