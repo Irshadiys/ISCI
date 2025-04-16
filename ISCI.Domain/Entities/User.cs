@@ -8,12 +8,14 @@ namespace Domain.Entities
 {
     public class User
     {
+
         //User details
         public int Id { get; set; }
         public string? UserName { get; set; }
         public string? FullName { get; set; }
         public string? Email { get; set; }
-        public string? PasswordHash { get; set; }
+        public byte[]? PasswordHash { get; set; }
+        public byte[]? PasswordSalt { get; set; }
 
         //Science details
         public string? Institution { get; set; }
